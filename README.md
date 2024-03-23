@@ -1,5 +1,5 @@
-<h3 align="center">Centering elements horizontally and vertically using HTML and CSS</h3>
+<h3 align="center">Welcome to my front-end tutorials repository! Explore innovative solutions and cutting-edge techniques to elevate your web development projects</h3>
 <p align="center">
-<img width="500" src="https://github.com/JamilaHajAhmad/centering-elements/assets/124258273/16879930-64eb-4e65-a992-3fdc87a41c3d">
+<img width="500" src="https://github.com/JamilaHajAhmad/Front-end-Tutorials/assets/124258273/d4c01b24-0d05-431d-90aa-c0c62bbd7f25">
 </p>
 
