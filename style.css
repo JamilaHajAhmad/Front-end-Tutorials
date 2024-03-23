@@ -1,0 +1,69 @@
+.parent {
+    margin: 70px auto;
+    width: 1200px;
+    height: 500px;
+    background-color: #eee;
+    position: relative; /* To let position of child be relative to its parent, if you didn't write it 
+    child's position will be relative to the body */
+}
+.x,.y {
+    position: relative;
+    border: 3px solid #ccc;
+}
+.x {
+    bottom: -250px; /* Half of parent height */
+}
+.y {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    width: 495px; /* Almost equals height of parent */
+    /* width: Sets the length of the hr on the page through a pixel or percentage value. */
+    top: 233px; /* Almost equal half of parent's height */
+}
+.child {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: crimson;
+    left: 0;top: 0; /* Initial position: 
+    top-left corner of the parent */
+}
+/* Method 1 : Negative margin with position */
+.child {
+    position: absolute; /* Relative to its parent */
+    left: 50%; /* Start from 50% of parent left direction */
+    margin-left: -150px; /* -(ve): to get child backward, and half of its width (half half)*/
+    top: 50%; /* Start from 50% of parent top direction */
+    margin-top: -75px; /* -(ve): to get child up, and half of its height */
+}
+.child {
+    left: 0;
+    top: 0; /* To return to the initial position */
+    margin: 0;
+}
+/* Method 2 : Position and transform */
+.child {
+    position: absolute;
+    left: 50%; /* Start from 50% of parent left direction */
+    top: 50%; /* Start from 50% of parent top direction */
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    /*translate property for x and y directions:
+    -50%: -(ve): to get child backward,and half of its width (half half)(x-axis)
+    -50%: -(ve): to get child up, and half of its height (y-axis) */
+}
+/* Method 3 : Flex */
+/*.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+/* First method is not recommended because when you change width and height of the element
+you have to change the value of margin in the 2 directions, but the second and third ones don't
+depend on dimensions of the element, so whenever you change them, the element is still centered */
