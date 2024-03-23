@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fill {
+    width: fit-content;
+    text-align: center;
+    margin: 200px auto;
+    font-size: 90px;
+    font-weight: bold;
+    -webkit-text-stroke: 3px black;
+    -webkit-text-fill-color: white;
+    position: relative;
+}
+.fill::before {
+    position: absolute;
+    content: attr(text);
+    -webkit-text-fill-color: firebrick;
+    width: 0;
+    overflow: hidden;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+}
+.fill:hover::before {
+    width: 100%;
+}
