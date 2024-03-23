@@ -1,5 +1,5 @@
 <h3>Centering elements horizontally and vertically using HTML and CSS</h3>
-![image](https://github.com/JamilaHajAhmad/centering-elements/assets/124258273/a4e8413c-485c-4186-8846-26a8b6a3d736)
+![image](https://github.com/jamilaHajAhmad/centering-elements/blob/main/image.jpg?raw=true)
 
 
 
