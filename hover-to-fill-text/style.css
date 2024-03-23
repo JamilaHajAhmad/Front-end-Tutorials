@@ -31,3 +31,6 @@ body {
 .fill:hover::before {
     width: 100%;
 }
+/* The text-fill-color property has not been standardized yet.
+Do not use it on making sites meeting the Web:
+it will not work for all users. */
