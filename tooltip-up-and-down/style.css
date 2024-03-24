@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button {
+    display: block;
+    margin: 200px auto;
+    background-color: bisque;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: aqua;
+    border: 2px solid aquamarine;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+button span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    top: -80px;
+    background-color: lightblue;
+    color: white;
+    padding: 10px 15px;
+    min-width: 250px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    display: block;
+    font-size: 25px;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+button span::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: lightblue transparent transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: -20px;
+}
+button:hover {
+    overflow: visible;
+}
+button:hover span {
+    opacity: 1;
+}
+[data-position="bottom"] span {
+    top: auto;
+    bottom: -70px;
+}
+[data-position="bottom"] span::before {
+    bottom: auto;
+    top: -20px;
+    border-color: transparent transparent lightblue;
+}
